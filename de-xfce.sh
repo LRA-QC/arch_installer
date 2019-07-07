@@ -14,7 +14,7 @@ else
 fi
 
 echo "--[Installing XORG]--"
-pacman $OPT xorg-server
+pacman $OPT xorg-server &>/dev/null 
 
 echo "--[Installing XFCE]--"
 pacman $OPT xfce4 &>/dev/null

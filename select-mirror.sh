@@ -8,8 +8,8 @@ OPT="--color always -q --noprogressbar --noconfirm --logfile pacman-$0.log"
 echo "--[MIRROR CONFIGURATION]--"
 echo "- Downloading new mirrors"
 curl -s https://www.archlinux.org/mirrorlist/all/ -o mirrorlist_download
-sed 's/\#S/S/' mirrorlist_download > mirrorlist_temp 
-cat mirrorlist |tail -n +6|grep -v -e "^$">mirrorlist_temp
+#sed 's/\#S/S/' mirrorlist_download > mirrorlist 
+cat mirrorlist_download |tail -n +6|grep -v -e "^$">mirrorlist_temp
 file="mirrorlist_temp"
 echo -e "- Generating mirrors by country:"
 while IFS= read line

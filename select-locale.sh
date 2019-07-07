@@ -51,5 +51,6 @@ echo '- setting utf8 and keyboard'
 echo "LANG=$LANG" >>/etc/locale.conf
 echo "$LANG UTF-8" >> /etc/locale.gen
 echo "KEYMAP=$LAYOUT"  >/etc/vconsole.conf
+echo "setxkbmap $LAYOUT" > /etc/profile.d/layout.sh
 cat /scripts/font.txt >>/etc/vconsole.conf
 locale-gen &>/dev/null
