@@ -17,6 +17,7 @@ while [ "$ask" != "n" ]; do
       if [ $fsize -lt 33 ]; then 
         pacman -S terminus-font $OPT &>/dev/null 
         setfont ter-v${fsize}n
+        echo "FONT=ter-v${fsize}n" > font.txt
       fi
     fi
   fi

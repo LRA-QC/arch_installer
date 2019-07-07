@@ -21,4 +21,5 @@ pacstrap /mnt openssh sudo &>/dev/null
 echo '- chroot to new install'
 mkdir /mnt/scripts
 cp *.sh /mnt/scripts &>/dev/null
+cp font.txt /mnt/scripts &>/dev/null
 arch-chroot /mnt /scripts/post-chroot.sh

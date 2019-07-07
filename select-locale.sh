@@ -30,7 +30,7 @@ echo "2: UK"
 echo "3: Français - Canada"
 echo "4: Français - France"
 echo "Cc: Custom"
-echo -e "e: exit\nCustom layouts: "
+echo -e "e: exit\nValid keyboard layouts: "
 localectl list-x11-keymap-layouts|xargs
 
 LAYOUT="us"
@@ -50,5 +50,6 @@ echo "------------------------------------------------"
 echo '- setting utf8 and keyboard'
 echo "LANG=$LANG" >>/etc/locale.conf
 echo "$LANG UTF-8" >> /etc/locale.gen
-echo "KEYMAP=$LAYOUT" >/etc/vconsole.conf
+echo "KEYMAP=$LAYOUT"  >/etc/vconsole.conf
+cat /scripts/font.txt >>/etc/vconsole.conf
 locale-gen &>/dev/null

@@ -8,7 +8,6 @@ systemctl enable NetworkManager &>/dev/null
 /scripts/select-tz.sh
 echo '- setting clock'
 hwclock --systohc
-echo 'FONT=ter-v32n'>>/etc/vconsole.conf
 /scripts/select-locale.sh
 
 read -p "- Enter a hostname for the machine : " NAME
