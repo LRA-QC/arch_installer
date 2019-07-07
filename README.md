@@ -8,3 +8,11 @@ script to install arch linux very quickly. By default it will install a setup wi
 - Get the scripts from this repo
 - Launch ./install.sh from the script folder and answer the questions.
 
+example:
+
+curl -L https://github.com/slayerizer/arch_installer/archive/master.zip --output scripts.zip
+pacman -Sy --noconfirm unzip
+unzip scripts.zip
+cd arch_installer-master
+chmod +x *.sh
+./install.sh
