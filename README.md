@@ -13,7 +13,7 @@ script to install arch linux very quickly. By default it will install a setup wi
   **Example:**
   
       curl -L https://github.com/slayerizer/arch_installer/archive/master.zip --output scripts.zip
-      bsdtar zxf scripts.zip
+      bsdtar -x -f scripts.zip
       cd arch_installer-master
       chmod +x *.sh
       ./install.sh
