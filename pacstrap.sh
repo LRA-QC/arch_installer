@@ -4,9 +4,12 @@ echo "--[MOUNTING FILESYSTEM]--"
 TARGET=$1
 umount -R /mnt &>/dev/null
 echo "- mount /"
-mount ${TARGET}2 /mnt  &>/dev/null
+echo "TARGET: $TARGET"
+
+# STANDARD
+mount ${TARGET}2 /mnt  ;
 mkdir /mnt/boot  
-mount ${TARGET}1 /mnt/boot &>/dev/null
+mount ${TARGET}1 /mnt/boot; 
 echo "- refreshing repositories"
 pacman -Syy &>/dev/null
 echo "- Installing base packages"

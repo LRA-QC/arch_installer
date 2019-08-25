@@ -25,6 +25,8 @@ if [ "$TARGET1" == "$TARGET2" ]; then
 	  mkpart primary fat32 64d 512MiB \
 	  set 1 esp on \
 	  mkpart primary ext4 512MiB -1MiB &>/dev/null
+  #CHECK FOR NVME DRIVE, IF SO, ADJUST THE TARGET DEVICE
+  if [[ -b /dev/${TARGET}p1 ]]; then echo "- NVME drive detected";TARGET=nvme0n1p;fi
   echo "- Formatting boot partition"
   mkfs.fat -F32 /dev/${TARGET}1   &>/dev/null
   echo "- Formatting data partition"
