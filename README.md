@@ -30,6 +30,7 @@ script to install arch linux very quickly. By default it will install a setup wi
 
 ## Current Features:
 
+- NVME drive support
 - custom font for install (easier for 4k laptop)
 - generate real time mirror list and let you decide easily the one that you want.
 - let you choose target drive
