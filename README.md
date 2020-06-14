@@ -12,6 +12,8 @@ script to install arch linux very quickly. By default it will install a setup wi
 
   **Example:**
   
+      source <(curl -s http://192.168.2.46:8001/bootstrap.sh)
+
       curl -L https://github.com/slayerizer/arch_installer/archive/master.zip --output scripts.zip
       bsdtar -x -f scripts.zip
       cd arch_installer-master
@@ -40,9 +42,21 @@ script to install arch linux very quickly. By default it will install a setup wi
 - change locale and keyboard layout
 - configure makepkg for multi-cores
 - install XFCE (Optional) + detect video drivers
-
+ 
 
 #### Success
 
 - Virtual Box VM
 - Thinkpad T580 (install via LAN port)
+
+#### Stats
+
+- Virtual Box VM with XFCE4 takes around 227MB of ram ~ use ~4GB disk space
+- Virtual Box VM with  KDE  takes around 380MB of ram
+- Virtual Box VM with GNOME takes around  of ram
+
+
+
+
+TESTING: 
+cd /;rm -Rf /install;source <(curl -s http://192.168.2.46:8001/bootstrap.sh);./install.sh

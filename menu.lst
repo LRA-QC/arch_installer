@@ -1,0 +1,8 @@
+a)   Change font size (optional)
+b)   Select mirrors (optional, will install faster by choosing a country near you)
+c)   Prepare disk (optional, skip if your disk is already partionned)
+d) * Select target filesystem used for install (mandatory)
+e) * Install base packages (mandatory)
+f)   Select custom packages (optional)
+m)   Select desktop environments (optional)
+x) exit installer

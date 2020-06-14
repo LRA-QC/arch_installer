@@ -1,0 +1,3 @@
+a)  Setup without encryption (faster access but less secure) [LVM]
+b)  Setup with encryption (more secure but slower access) [LUKS+LVM]
+x) exit

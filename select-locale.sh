@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 function setlocale
 {
@@ -37,7 +37,7 @@ function setkblayout
     echo "4: Français - France"
     echo "C: Custom - see list below"
     echo -e "E: exit\nOther valid custom keyboard layouts: "
-    localectl list-x11-keymap-layouts|xargs
+    #localectl list-x11-keymap-layouts|xargs
 
     LAYOUT="us"
     while true; do
@@ -54,6 +54,7 @@ function setkblayout
     echo "------------------------------------------------"
 
 }
+
 
 while true; do
   setlocale
